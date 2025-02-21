@@ -70,16 +70,12 @@ ol {
   grid-template:
     "result details";
   width: 1140px;
-  height: 534px;
-
 }
 
 .result {
   grid-area: result;
   width: 711px;
-  height: 386px;
   margin-top: 78px;
-
 }
 
 .result__video-container {
@@ -90,8 +86,8 @@ ol {
 }
 
 .result__video {
-  width: 711px;
-  height: 386px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -99,25 +95,23 @@ ol {
   display: flex;
   justify-content: space-between;
   width: 711px;
-  height: 59px;
   align-items: end;
 }
 
 .search-form__fieldset {
   border: none;
-  padding-bottom: 5px;
+
 }
 
 .search-form__fieldset-title {
   font-weight: 400;
   font-size: 18px;
-  margin-bottom: 4px;
+  padding: 6px 0;
 }
 
 .search-form__label {
   display: flex;
   width: fit-content;
-  height: 22px;
   gap: 5px;
 }
 
@@ -132,7 +126,8 @@ ol {
   border: none;
   border-top: #fff 1px solid;
   border-bottom: #fff 1px solid;
-  text-decoration: none;;
+  text-decoration: none;
+  appearance: none; 
 }
 
 .search-form__textfield::placeholder {
@@ -158,11 +153,12 @@ ol {
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
+  padding: 2px 0 3px 0;
 }
 
-.search-form__label:hover {
+.search-form__label:has(.search-form__pseudo-checkbox):hover {
   text-decoration: underline;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .search-form__label:focus-within {
@@ -172,7 +168,6 @@ ol {
 .search-form__checkbox {
   display: none;
 }
-
 
 .search-form__pseudo-checkbox {
   width: 19px;
@@ -199,13 +194,14 @@ ol {
 }
 
 .button {
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
   background-color: #1b1919;
   border: 1px solid #fff;
   color: #fff;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .button:active {
@@ -240,13 +236,13 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 22px;
   height: 100%;
   width: 100%;
 }
 
 .title {
-  height: 210px;
+  margin-top: 4px;
   width: 100%;
   font-family: Oswald, sans-serif;
   font-weight: 700;
@@ -262,7 +258,7 @@ ol {
 .content__card-link {
   text-decoration: none;
   color:#fff;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .content__list {
